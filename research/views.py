@@ -9,6 +9,7 @@ from .serializers import TranslationsSerializer, UsersSerializer
 
 
 class TranslateAPIView(views.APIView):
+    serializer_class = TranslationsSerializer
 
     def get(self, request, *args, **kwargs):
         user_data = get_object_or_404(User, username=self.request.user.username)

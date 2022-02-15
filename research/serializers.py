@@ -14,3 +14,4 @@ class TranslationsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Translations
         fields = '__all__' 
+        read_only_fields = ('created_at', 'updated_at', 'translated_text', 'finished_at', 'is_finished')
